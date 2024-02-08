@@ -58,9 +58,11 @@ const HeroSection = () => {
             <Image
               src='/images/headshot.jpg'
               alt='headshot of developer rhysmoggs'
-              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
-              width={400}
-              height={400}
+              width='0'
+              height='0'
+              sizes='100vw'
+              className='w-full h-auto'
+              priority={true}
             />
           </div>
         </div>
