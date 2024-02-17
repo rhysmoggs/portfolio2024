@@ -1,7 +1,18 @@
+'use client'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import { useState, useTransition } from 'react'
 
 export default function About() {
+  const [tab, setTab] = useState('skills')
+  const [startTransition, isPending] = useTransition()
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id)
+    })
+  }
+
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
       <Navbar />
@@ -11,7 +22,7 @@ export default function About() {
             <h2 className='text-xl md:text-3xl font-bold text-white mb-4'>
               About Me
             </h2>
-            <p>
+            <p className='text-base lg:text-lg'>
               {/* add attributes to HYVE link below: */}I am a Front End
               Developer with commercial experience in a junior role for{' '}
               <Link href={'https://www.trainhyve.com/'}>HYVE</Link> , a
@@ -41,6 +52,13 @@ export default function About() {
               {/* add link to Projects/GitHub page below: */}
               Please take some time to look around.
             </p>
+            <div className='flex flex-row my-8'>
+              <span className='mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-red-500'>
+                Skills
+              </span>
+              <span>Education</span>
+              <span>Experience</span>
+            </div>
           </div>
         </div>
       </section>
