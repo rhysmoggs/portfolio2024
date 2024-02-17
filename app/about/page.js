@@ -2,10 +2,53 @@
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { useState, useTransition } from 'react'
+import TabButton from '../components/TabButton'
+import Image from 'next/image'
+
+const TAB_DATA = [
+  {
+    title: 'Skills',
+    id: 'skills',
+    content: (
+      <ul className='list-disc pl-2'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Python</li>
+        <li>Django</li>
+        <li>Flask</li>
+      </ul>
+    ),
+  },
+  {
+    title: 'Education',
+    id: 'education',
+    content: (
+      <ul className='list-disc pl-2'>
+        <li>Web Application Development (Diploma - Merit)</li>
+        <li>Code Institute, Dublin. Remote.</li>
+      </ul>
+    ),
+  },
+  {
+    title: 'Certifications',
+    id: 'certifications',
+    content: (
+      <ul className='list-disc pl-2'>
+        <li>AWS Cloud Practitioner...pending</li>
+        <li>AWS Solutions Architect...pending</li>
+      </ul>
+    ),
+  },
+]
 
 export default function About() {
   const [tab, setTab] = useState('skills')
-  const [startTransition, isPending] = useTransition()
+  const [isPending, startTransition] = useTransition()
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -18,6 +61,17 @@ export default function About() {
       <Navbar />
       <section className='text-white' id='about'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+          <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
+            <Image
+              src='/images/headshot.jpg'
+              alt='headshot of developer rhysmoggs'
+              width='0'
+              height='0'
+              sizes='100vw'
+              className='w-full h-auto'
+              priority={true}
+            />
+          </div>
           <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
             <h2 className='text-xl md:text-3xl font-bold text-white mb-4'>
               About Me
@@ -52,12 +106,28 @@ export default function About() {
               {/* add link to Projects/GitHub page below: */}
               Please take some time to look around.
             </p>
-            <div className='flex flex-row my-8'>
-              <span className='mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-red-500'>
+            <div className='flex flex-row justify-start my-8'>
+              <TabButton
+                selectTab={() => handleTabChange('skills')}
+                active={tab === 'skills'}
+              >
                 Skills
-              </span>
-              <span>Education</span>
-              <span>Experience</span>
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange('education')}
+                active={tab === 'education'}
+              >
+                Education
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange('certifications')}
+                active={tab === 'certifications'}
+              >
+                Certifications
+              </TabButton>
+            </div>
+            <div className='mt-8'>
+              {TAB_DATA.find((t) => t.id === tab).content}
             </div>
           </div>
         </div>
