@@ -1,6 +1,28 @@
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/ProjectCard'
 
+const projectsData = [
+  {
+    id: 1,
+    title: 'Bakes by Noemie',
+    description:
+      'A bakery website for Code Institutes diploma. Early stages of learning HTML, CSS and basic web development fundamentals.',
+    image: '/public/images/projects/ms1.png',
+    github: 'https://github.com/rhysmoggs/ms1-bakes-by-noemie',
+    techstack: ['HTML', 'CSS', 'Markdown'],
+    tag: ['All', 'Web'],
+  },
+  {
+    id: 2,
+    title: 'Globe Trotter Quiz',
+    description: 'Original travel and geography-themed quiz.',
+    techstack: ['HTML', 'CSS', 'JavaScript', 'Markdown'],
+    image: '/public/images/projects/ms1.png',
+    github: 'https://github.com/rhysmoggs/ms2-quiz',
+    tag: ['All', 'Web'],
+  },
+]
+
 export default function Projects() {
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
