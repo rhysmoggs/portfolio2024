@@ -73,7 +73,7 @@ export default function About() {
             />
           </div>
           <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
-            <h2 className='text-xl md:text-3xl font-bold text-white mb-4'>
+            <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>
               About Me
             </h2>
             <p className='text-base lg:text-lg'>
