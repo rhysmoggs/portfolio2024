@@ -42,7 +42,7 @@ export default function Projects() {
     <main className='flex min-h-screen flex-col bg-[#121212]'>
       <Navbar />
       <section className='text-white' id='projects'>
-        <div className='py-8 px-4 sm:py-16 xl:px-16'>
+        <div className='py-8 px-4 sm:py-16 xl:px-16 min-h-screen'>
           <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
             <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>
               Projects
@@ -89,6 +89,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

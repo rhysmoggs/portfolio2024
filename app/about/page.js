@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import { useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 
 const TAB_DATA = [
   {
@@ -60,7 +61,7 @@ export default function About() {
     <main className='flex min-h-screen flex-col bg-[#121212]'>
       <Navbar />
       <section className='text-white' id='about'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 min-h-screen'>
           <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
             <Image
               src='/images/headshot.jpg'
@@ -132,6 +133,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }
