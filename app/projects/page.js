@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/ProjectCard'
 import ProjectTag from '../components/ProjectTag'
+import Footer from '../components/Footer'
 
 const projectsData = [
   {
