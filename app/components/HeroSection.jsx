@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-8 place-self-center text-center sm:text-left justify-self-start'>
           <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-red-500'>
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-100'>
               Hello, I&apos;m{' '}
             </span>
             <br />
@@ -40,16 +40,16 @@ const HeroSection = () => {
             <Link
               href={'https://www.linkedin.com/in/rhysmoggs/'}
               target='_blank'
-              className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-slate-100 to-red-500 hover:bg-slate-200 text-black'
+              className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-200 text-black'
             >
               Hire Me @ LinkedIn
             </Link>
             <Link
               href={'https://github.com/rhysmoggs'}
               target='_blank'
-              className='px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-slate-100 to-red-500 hover:bg-slate-800 text-white mt-3'
+              className='px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-800 text-white mt-3'
             >
-              <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
+              <span className='block bg-[#121212] hover:bg-secondary-800 rounded-full px-5 py-2'>
                 GitHub
               </span>
             </Link>

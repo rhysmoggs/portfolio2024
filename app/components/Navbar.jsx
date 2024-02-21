@@ -29,7 +29,7 @@ const Navbar = () => {
           href={'/'}
           className='text-2xl md:text-5xl text-white font-semibold'
         >
-          <span className='text-transparent bg-clip-text bg-gradient-to-l from-slate-100 to-red-500'>
+          <span className='text-transparent bg-clip-text bg-gradient-to-l from-secondary-100 to-primary-500'>
             rhys
           </span>
           moggs
@@ -38,14 +38,14 @@ const Navbar = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+              className='flex items-center px-3 py-2 border rounded border-secondary-200 text-secondary-200 hover:text-white hover:border-white'
             >
               <Bars3Icon className='h-5 w-5' />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+              className='flex items-center px-3 py-2 border rounded border-secondary-200 text-secondary-200 hover:text-white hover:border-white'
             >
               <XMarkIcon className='h-5 w-5' />
             </button>
