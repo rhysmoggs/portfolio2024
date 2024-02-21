@@ -1,9 +1,10 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import ProjectCard from '../components/ProjectCard'
 import ProjectTag from '../components/ProjectTag'
 import Footer from '../components/Footer'
+import { motion, useInView } from 'framer-motion'
 
 const projectsData = [
   {
@@ -29,6 +30,8 @@ const projectsData = [
 
 export default function Projects() {
   const [tag, setTag] = useState('All')
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   const handleTagChange = (newTag) => {
     setTag(newTag)
@@ -37,6 +40,11 @@ export default function Projects() {
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   )
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  }
 
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
@@ -65,10 +73,16 @@ export default function Projects() {
               />
             </div>
           </div>
-          <div className='grid md:grid-cols-3 gap-8 md:gap-12'>
+          <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
             {Object.keys(filteredProjects).length !== 0 ? (
-              filteredProjects.map((project) => {
-                return (
+              filteredProjects.map((project, index) => (
+                <motion.li
+                  key={index}
+                  variants={cardVariants}
+                  initial='initial'
+                  animate={isInView ? 'animate' : 'initial'}
+                  transition={{ duration: 0.3, delay: index * 0.4 }}
+                >
                   <ProjectCard
                     key={project.id}
                     title={project.title}
@@ -77,8 +91,8 @@ export default function Projects() {
                     image={project.image}
                     github={project.github}
                   />
-                )
-              })
+                </motion.li>
+              ))
             ) : (
               <>
                 <h5 className='text-center text-2xl text-white mt-4 mb-8 md:mb-12'>
@@ -86,7 +100,7 @@ export default function Projects() {
                 </h5>
               </>
             )}
-          </div>
+          </ul>
         </div>
       </section>
       <Footer />
