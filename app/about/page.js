@@ -73,7 +73,7 @@ export default function About() {
               priority={true}
             />
           </div>
-          <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+          <div className='mt-4 text-left flex flex-col h-full'>
             <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>
               About Me
             </h2>
