@@ -9,21 +9,73 @@ import { motion, useInView } from 'framer-motion'
 const projectsData = [
   {
     id: 1,
+    title: 'Morgan & Co',
+    description:
+      'A furniture e-commerce store. Full-stack Django project using stripe payments and webhooks..',
+    techstack: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Python',
+      'Flask',
+      'PostgreSQL',
+      'MongoDB',
+      'materializeCSS',
+      'Heroku',
+      'Markdown',
+    ],
+    image: '/images/projects/ms4.png',
+    github: 'https://github.com/rhysmoggs/ms4-morgan-and-co',
+    tag: ['All', 'Web', 'Database', 'E-commerce'],
+  },
+  {
+    id: 2,
+    title: 'The Cocktail Cabinet',
+    description:
+      'A cocktail recepie sharing website, showcasing database management.',
+    techstack: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Python',
+      'Flask',
+      'PostgreSQL',
+      'MongoDB',
+      'materializeCSS',
+      'Heroku',
+      'Markdown',
+    ],
+    image: '/images/projects/ms3.png',
+    github: 'https://github.com/rhysmoggs/ms3-final-cocktails',
+    tag: ['All', 'Web', 'Database'],
+  },
+  {
+    id: 3,
+    title: 'Globe Trotter Quiz',
+    description: 'Original travel and geography-themed quiz.',
+    techstack: ['HTML', 'CSS', 'JavaScript', 'Markdown'],
+    image: '/images/projects/ms2.png',
+    github: 'https://github.com/rhysmoggs/ms2-quiz',
+    tag: ['All', 'Web'],
+  },
+  {
+    id: 4,
+    title: 'WIP: Globe Trotter Quiz v2.0',
+    description:
+      'WIP: Redevelopment of original quiz idea to advance NextJS skills.',
+    image: '/images/projects/ms2.png',
+    github: 'https://github.com/rhysmoggs/nextjs13-quiz',
+    techstack: ['HTML', 'CSS', 'JavaScript', 'Next.js'],
+    tag: ['All', 'Web', 'Database'],
+  },
+  {
+    id: 5,
     title: 'Bakes by Noemie',
     description:
       'A bakery website developed as part of Code Institutes Diploma. Early stages of learning HTML, CSS and basic web development fundamentals.',
     image: '/images/projects/ms1.png',
     github: 'https://github.com/rhysmoggs/ms1-bakes-by-noemie',
     techstack: ['HTML', 'CSS', 'Markdown'],
-    tag: ['All', 'Web'],
-  },
-  {
-    id: 2,
-    title: 'Globe Trotter Quiz',
-    description: 'Original travel and geography-themed quiz.',
-    techstack: ['HTML', 'CSS', 'JavaScript', 'Markdown'],
-    image: '/images/projects/ms2.png',
-    github: 'https://github.com/rhysmoggs/ms2-quiz',
     tag: ['All', 'Web'],
   },
 ]
@@ -70,6 +122,16 @@ export default function Projects() {
                 onClick={handleTagChange}
                 name={'Mobile'}
                 isSelected={tag === 'Mobile'}
+              />
+              <ProjectTag
+                onClick={handleTagChange}
+                name={'Database'}
+                isSelected={tag === 'Database'}
+              />
+              <ProjectTag
+                onClick={handleTagChange}
+                name={'E-commerce'}
+                isSelected={tag === 'E-commerce'}
               />
             </div>
           </div>
