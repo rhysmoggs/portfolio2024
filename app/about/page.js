@@ -11,7 +11,7 @@ const TAB_DATA = [
     title: 'Skills',
     id: 'skills',
     content: (
-      <ul className='list-disc pl-2'>
+      <ul className='list-disc pl-2 md:pl-0 md:grid md:grid-cols-3 gap-2'>
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
@@ -61,7 +61,7 @@ export default function About() {
     <main className='flex min-h-screen flex-col bg-[#121212]'>
       <Navbar />
       <section className='text-white' id='about'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 min-h-screen'>
+        <div className='md:grid md:grid-cols-2 gap-8 items-center py-24 px-4 xl:gap-16 xl:px-16 min-h-screen'>
           <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
             <Image
               src='/images/headshot.jpg'
@@ -73,15 +73,18 @@ export default function About() {
               priority={true}
             />
           </div>
-          <div className='mt-4 text-left flex flex-col h-full'>
-            <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>
+          <div className='mt-4 pr-16 text-left flex flex-col h-full'>
+            <h2 className='text-center text-4xl font-bold text-white mt-16 mb-6 md:mb-8'>
               About Me
             </h2>
             <p className='text-base lg:text-lg'>
               {/* add attributes to HYVE link below: */}I am a Front End
               Developer with commercial experience in a junior role for{' '}
-              <Link href={'https://www.trainhyve.com/'}>HYVE</Link> , a
-              revolutionary gym and wellbeing centre.
+              <Link href={'https://www.trainhyve.com/'} target='_blank'>
+                HYVE
+              </Link>
+              , a revolutionary gym and wellbeing centre.
+              <br />
               <br />
               {/* add date of graduation? and link to CI website?: */}
               Having graduated with a Diploma in Web Application Development
@@ -91,6 +94,7 @@ export default function About() {
               experience working within the telecommunications, energy and
               financial sectors.
               <br />
+              <br />
               {/* add link to Projects/GitHub page below - add span?: */}I have
               built multiple{' '}
               <Link href={'https://github.com/rhysmoggs'} className='font-bold'>
@@ -99,6 +103,7 @@ export default function About() {
               and have collaborated on both personal and professional projects
               along with a Hackathon - a finance budget calculator and currency
               converter.
+              <br />
               <br />
               I am currently studying towards certification as an AWS Cloud
               Practitioner & Solutions Architect and have previously studied
@@ -127,7 +132,7 @@ export default function About() {
                 Certifications
               </TabButton>
             </div>
-            <div className='mt-8'>
+            <div className='mt-2'>
               {TAB_DATA.find((t) => t.id === tab).content}
             </div>
           </div>

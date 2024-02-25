@@ -27,12 +27,13 @@ const Navbar = () => {
       <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2'>
         <Link
           href={'/'}
-          className='text-2xl md:text-5xl text-white font-semibold'
+          className='text-4xl md:text-6xl text-white font-semibold text-center'
         >
-          <span className='text-transparent bg-clip-text bg-gradient-to-l from-secondary-100 to-primary-500'>
-            rhys
+          <span className='text-primary-500'>r</span>
+          <span className='text-secondary-100'>m</span>
+          <span className='block text-sm text-secondary-100'>
+            rhysmoggs - dev.
           </span>
-          moggs
         </Link>
         <div className='mobile-menu block md:hidden'>
           {!navbarOpen ? (

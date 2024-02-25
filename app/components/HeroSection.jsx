@@ -10,9 +10,8 @@ const HeroSection = () => {
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-8 place-self-center text-center sm:text-left justify-self-start'>
           <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-100'>
-              Hello, I&apos;m{' '}
-            </span>
+            <span className='text-primary-500'>Hello, </span>
+            <span className='text-secondary-100'>I&apos;m </span>
             <br />
             <TypeAnimation
               sequence={[
@@ -40,7 +39,8 @@ const HeroSection = () => {
             <Link
               href={'https://www.linkedin.com/in/rhysmoggs/'}
               target='_blank'
-              className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-200 text-black'
+              className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 bg-primary-500 hover:bg-secondary-200 text-black'
+              // className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-200 text-black'
             >
               Hire Me @ LinkedIn
             </Link>
