@@ -39,6 +39,7 @@ const HeroSection = () => {
             <Link
               href={'https://www.linkedin.com/in/rhysmoggs/'}
               target='_blank'
+              rel='noreferrer'
               className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 bg-primary-500 hover:bg-secondary-200 text-black'
               // className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-200 text-black'
             >
@@ -47,6 +48,7 @@ const HeroSection = () => {
             <Link
               href={'https://github.com/rhysmoggs'}
               target='_blank'
+              rel='noreferrer'
               className='px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-800 text-white mt-3'
             >
               <span className='block bg-[#121212] hover:bg-secondary-800 rounded-full px-5 py-2'>

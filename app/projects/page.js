@@ -100,13 +100,11 @@ export default function Projects() {
 
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
-      <Navbar />
       <section className='text-white' id='projects'>
         <div className='py-8 px-4 sm:py-16 xl:px-16 min-h-screen'>
           <div className='mt-4 text-left flex flex-col h-full'>
             <h2 className='text-center text-4xl font-bold text-white mt-16 mb-4 md:mb-8'>
               Projects
-              {/* <span className='block py-0 my-0 top-0'>_</span> */}
             </h2>
             <div className='text-white flex flex-row flex-wrap justify-center items-center gap-3 py-6 mb-8'>
               <ProjectTag
@@ -166,7 +164,6 @@ export default function Projects() {
           </ul>
         </div>
       </section>
-      <Footer />
     </main>
   )
 }

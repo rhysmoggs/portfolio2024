@@ -59,10 +59,16 @@ export default function About() {
 
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
-      <Navbar />
       <section className='text-white' id='about'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-24 px-4 xl:gap-16 xl:px-16 min-h-screen'>
-          <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
+        <div className='pt-8 px-4 sm:pt-16 xl:px-16'>
+          <div className='mt-4 text-left flex flex-col h-full'>
+            <h2 className='text-center text-4xl font-bold text-white mt-16 mb-4 md:mb-0'>
+              About Me
+            </h2>
+          </div>
+        </div>
+        <div className='md:grid md:grid-cols-2 gap-8 px-4 xl:gap-16 xl:px-16 min-h-screen'>
+          <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden mx-auto md:mt-28'>
             <Image
               src='/images/headshot.jpg'
               alt='headshot of developer rhysmoggs'
@@ -73,14 +79,15 @@ export default function About() {
               priority={true}
             />
           </div>
-          <div className='mt-4 pr-16 text-left flex flex-col h-full'>
-            <h2 className='text-center text-4xl font-bold text-white mt-16 mb-6 md:mb-8'>
-              About Me
-            </h2>
+          <div className='py-8 px-4 sm:py-16 xl:px-16 min-h-screen'>
             <p className='text-base lg:text-lg'>
               {/* add attributes to HYVE link below: */}I am a Front End
               Developer with commercial experience in a junior role for{' '}
-              <Link href={'https://www.trainhyve.com/'} target='_blank'>
+              <Link
+                href={'https://www.trainhyve.com/'}
+                target='_blank'
+                rel='noreferrer'
+              >
                 HYVE
               </Link>
               , a revolutionary gym and wellbeing centre.
@@ -97,7 +104,12 @@ export default function About() {
               <br />
               {/* add link to Projects/GitHub page below - add span?: */}I have
               built multiple{' '}
-              <Link href={'https://github.com/rhysmoggs'} className='font-bold'>
+              <Link
+                href={'https://github.com/rhysmoggs'}
+                target='_blank'
+                rel='noreferrer'
+                className='font-bold'
+              >
                 projects
               </Link>{' '}
               and have collaborated on both personal and professional projects
@@ -138,7 +150,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   )
 }
