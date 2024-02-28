@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 const HeroSection = () => {
   return (
-    <section className='lg:py-16'>
+    <section className='md:pt-20 lg:pt-18'>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-8 place-self-center text-center sm:text-left justify-self-start'>
           <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold'>
@@ -41,7 +41,6 @@ const HeroSection = () => {
               target='_blank'
               rel='noreferrer'
               className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 bg-primary-500 hover:bg-secondary-200 text-black'
-              // className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-200 text-black'
             >
               Hire Me @ LinkedIn
             </Link>
