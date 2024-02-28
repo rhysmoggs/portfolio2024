@@ -23,7 +23,7 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <nav className='fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 pb-4 md:pb-1'>
+    <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 pb-4 md:pb-1'>
       <div class='relative h-16 md:h-24 lg:h-32 w-screen'>
         <div class='absolute left-0 top-0 h-16 w-16'>
           {/* empty div for space */}
