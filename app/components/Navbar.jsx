@@ -24,7 +24,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 pb-4 md:pb-1'>
-      <div className='relative h-16 md:h-24 lg:h-32 w-screen'>
+      <div className='relative h-16 md:h-24 lg:h-32'>
         <div className='absolute left-0 top-0 h-16 w-16'>
           {/* empty div for space */}
         </div>
@@ -42,29 +42,32 @@ const Navbar = () => {
             <span className='block text-xs md:text-sm leading-3 text-secondary-100'>
               rhysmoggs - dev.
             </span>
+            <span className='block text-xs  text-secondary-100'>
+              ___________
+            </span>
           </Link>
         </div>
-        <div className='absolute top-0 right-0 h-16 w-16'>
+        <div className='absolute top-6 right-0 h-16 w-16'>
           <div className='mobile-menu block md:hidden'>
             {!navbarOpen ? (
               <button
                 onClick={() => setNavbarOpen(true)}
                 className='flex items-center px-3 py-2 border rounded border-secondary-200 text-secondary-200 hover:text-white hover:border-white'
               >
-                <Bars3Icon className='h-5 w-5' />
+                <Bars3Icon className='h-4 w-4' />
               </button>
             ) : (
               <button
                 onClick={() => setNavbarOpen(false)}
                 className='flex items-center px-3 py-2 border rounded border-secondary-200 text-secondary-200 hover:text-white hover:border-white'
               >
-                <XMarkIcon className='h-5 w-5' />
+                <XMarkIcon className='h-4 w-4' />
               </button>
             )}
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center menu' id='navbar'>
+      <div className='flex justify-center items-center menu mt-4' id='navbar'>
         <ul className='hidden md:flex md:flex-row md:space-x-8 py-2'>
           {navLinks.map((link, index) => (
             <li key={index}>
