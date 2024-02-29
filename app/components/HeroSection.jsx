@@ -10,17 +10,13 @@ import { TypeAnimation } from 'react-type-animation'
 const HeroSection = () => {
   return (
     <section className='md:pt-20 lg:pt-18'>
-      {/* <div className='flex gap-4 m-2'> */}
       <div className='grid grid-cols-12 mx-8 my-4'>
-        {/* below two lines, just for ref, can delete */}
-        {/* <div className='flex justify-center items-center menu mt-4' id='navbar'>
-        <ul className='hidden md:flex md:flex-row md:space-x-8 py-2'> */}
         <div className='hidden md:block col-span-2 mx-2 place-self-center border border-red-500'>
           <h1 className='text-white text-3xl'>01:</h1>
           <h1 className='text-white text-3xl'>HERO</h1>
           {/* create and then add HeroSection component again */}
         </div>
-        <div className='col-span-10 mx-2 border border-blue-500'>
+        <div className='col-span-10 border border-blue-500'>
           <div className='grid grid-cols-1 sm:grid-cols-12'>
             <div className='col-span-8 place-self-center text-center sm:text-left md:justify-self-start'>
               <h1 className='text-white mb-4 text-xl md:text-3xl lg:text-4xl lg:leading-normal font-extrabold'>
