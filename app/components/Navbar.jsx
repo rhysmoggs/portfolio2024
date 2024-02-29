@@ -23,12 +23,12 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <nav className='fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 pb-4 md:pb-1'>
-      <div class='relative h-16 md:h-24 lg:h-32 w-screen'>
-        <div class='absolute left-0 top-0 h-16 w-16'>
+    <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 pb-4 md:pb-1'>
+      <div className='relative h-16 md:h-24 lg:h-32 w-screen'>
+        <div className='absolute left-0 top-0 h-16 w-16'>
           {/* empty div for space */}
         </div>
-        <div class='absolute inset-x-0 top-0 h-16 text-center'>
+        <div className='absolute inset-x-0 top-0 h-16 text-center'>
           <Link
             href={'/'}
             className='text-6xl md:text-7xl lg:text-8xl text-white text-center'
@@ -44,7 +44,7 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <div class='absolute top-0 right-0 h-16 w-16'>
+        <div className='absolute top-0 right-0 h-16 w-16'>
           <div className='mobile-menu block md:hidden'>
             {!navbarOpen ? (
               <button
