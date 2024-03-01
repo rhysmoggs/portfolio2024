@@ -1,10 +1,7 @@
 'use client'
 import Link from 'next/link'
-import Navbar from '../components/Navbar'
 import { useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
-import Image from 'next/image'
-import Footer from '../components/Footer'
 
 const TAB_DATA = [
   {
@@ -47,7 +44,7 @@ const TAB_DATA = [
   },
 ]
 
-const Hero = () => {
+const About = () => {
   const [tab, setTab] = useState('skills')
   const [isPending, startTransition] = useTransition()
 
@@ -127,4 +124,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default About
