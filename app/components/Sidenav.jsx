@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import SideLink from './SideLink'
 import Hero from './Hero'
 import About from './About'
@@ -24,6 +24,13 @@ const sidenavLinks = [
 
 const Sidenav = () => {
   // const [navbarOpen, setNavbarOpen] = useState(false)
+  //rename this state:
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleView = () => {
+    console.log('isOpen parent: ', isOpen)
+    setIsOpen(!isOpen)
+  }
   return (
     <div className='md:grid grid-cols-12 mx-8 my-4'>
       {sidenavLinks.map((data, index) => (
@@ -32,13 +39,14 @@ const Sidenav = () => {
             <SideLink
               key={index}
               href={data.path}
+              onClick={toggleView}
               title={data.title}
               pageNo={data.pageNo}
             />
           </div>
           <div className='col-span-10 border border-blue-500'>
-            {data.title === 'hero' ? <Hero /> : null}
-            {data.title === 'about' ? <About /> : null}
+            {data.title === 'hero' ? <Hero hiddenClass={isOpen} /> : null}
+            {data.title === 'about' ? <About hiddenClass={isOpen} /> : null}
           </div>
         </>
       ))}

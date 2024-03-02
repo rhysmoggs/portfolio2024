@@ -44,7 +44,7 @@ const TAB_DATA = [
   },
 ]
 
-const About = () => {
+const About = ({ hideClass }) => {
   const [tab, setTab] = useState('skills')
   const [isPending, startTransition] = useTransition()
 
@@ -54,7 +54,8 @@ const About = () => {
     })
   }
   return (
-    <section className='text-white' id='about'>
+    // <section className='text-white' id='about'>
+    <section className={`${hideClass ? 'hidden' : 'text-white'}`} id='about'>
       <div className='py-2 px-2 xl:px-8'>
         <p className='text-base'>
           {/* add attributes to HYVE link below: */}I am a Front End Developer

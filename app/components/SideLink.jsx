@@ -1,17 +1,18 @@
-'use client'
+// 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 
-function SideLink({ href, title, pageNo }) {
-  const [isOpen, setIsOpen] = useState()
-  const toggleView = () => {
-    setIsOpen(!isOpen)
-  }
+function SideLink({ href, title, pageNo, onClick }) {
+  // const [isOpen, setIsOpen] = useState()
+  // const toggleView = () => {
+  //   console.log('isOpen child: ', isOpen)
+  //   setIsOpen(!isOpen)
+  // }
   return (
     <>
       <Link
         href={href}
-        onClick={toggleView}
+        onClick={onClick}
         className='border border-green-500 m-2 text-right'
       >
         <h1 className='text-white text-xl'>{0 + `${pageNo}`}</h1>
