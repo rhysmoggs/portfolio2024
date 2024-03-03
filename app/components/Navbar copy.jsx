@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* <div className='flex justify-center items-center menu mt-4' id='navbar'>
+      <div className='flex justify-center items-center menu mt-4' id='navbar'>
         <ul className='hidden md:flex md:flex-row md:space-x-8 py-2'>
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -75,44 +75,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-      </div> */}
-      {navbarOpen ? (
-        <div className='flex flex-col py-4 items-center'>
-          <button
-            // href={'#hero'}
-            // id={1}
-            id={'hero'}
-            onClick={(e) => togglePage(e)}
-            className='border border-green-500 m-2'
-          >
-            <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
-              hero
-            </h1>
-          </button>
-          <button
-            // href={'#about'}
-            // id={2}
-            id={'about'}
-            onClick={(e) => togglePage(e)}
-            className='border border-green-500 m-2'
-          >
-            <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
-              about
-            </h1>
-          </button>
-          <button
-            // href={'#projects'}
-            // id={3}
-            id={'projects'}
-            onClick={(e) => togglePage(e)}
-            className='border border-green-500 m-2'
-          >
-            <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
-              projects
-            </h1>
-          </button>
-        </div>
-      ) : null}
+      </div>
+      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   )
 }

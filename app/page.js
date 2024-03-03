@@ -13,14 +13,17 @@ export default function Home() {
     setShowPage(id)
     setIsOpen((prevState) => !prevState)
   }
+
+  //fix navigation for mobile. look at "hidden" class below?:
+
   return (
     <main className='flex h-screen flex-col bg-[#121212] border border-pink-500'>
       <section className='pt-2'>
-        <div className='hidden md:block col-span-2 mx-2 border border-red-500'>
+        <div className='md:block col-span-2 mx-2 border border-red-500'>
           <div className='md:grid grid-cols-12 mx-8 my-4'>
             <div className='hidden md:block col-span-2 mx-2 border border-red-500 text-right'>
-              <Link
-                href={'#hero'}
+              <button
+                // href={'#hero'}
                 // id={1}
                 id={'hero'}
                 onClick={(e) => togglePage(e)}
@@ -30,9 +33,9 @@ export default function Home() {
                 <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
                   hero
                 </h1>
-              </Link>
-              <Link
-                href={'#about'}
+              </button>
+              <button
+                // href={'#about'}
                 // id={2}
                 id={'about'}
                 onClick={(e) => togglePage(e)}
@@ -42,9 +45,9 @@ export default function Home() {
                 <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
                   about
                 </h1>
-              </Link>
-              <Link
-                href={'#projects'}
+              </button>
+              <button
+                // href={'#projects'}
                 // id={3}
                 id={'projects'}
                 onClick={(e) => togglePage(e)}
@@ -54,7 +57,7 @@ export default function Home() {
                 <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>
                   projects
                 </h1>
-              </Link>
+              </button>
             </div>
             <div className='col-span-10 border border-blue-500'>
               {showPage === 'hero' ? <Hero /> : null}
