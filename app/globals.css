@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.calcWidth {
+  margin-left: calc(25vw);
+}
