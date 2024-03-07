@@ -6,11 +6,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 const Hero = ({ hideClass }) => {
   return (
-    <div
-      // className='grid grid-cols-1 sm:grid-cols-12 '
-      className={`${hideClass ? 'hidden' : 'grid grid-cols-1 sm:grid-cols-12'}`}
-      id='hero'
-    >
+    <div className='grid grid-cols-1 sm:grid-cols-12' id='hero'>
       <div className='col-span-8 place-self-center text-center sm:text-left md:justify-self-start'>
         <h1 className='text-white mb-4 text-xl md:text-3xl lg:text-5xl lg:leading-normal font-extrabold'>
           <span className='text-primary-500'>Hello, </span>

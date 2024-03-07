@@ -1,8 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import SideLink from './SideLink'
-import Hero from './Hero'
-import About from './About'
 
 const sidenavLinks = [
   {
@@ -43,10 +41,6 @@ const Sidenav = () => {
               title={data.title}
               pageNo={data.pageNo}
             />
-          </div>
-          <div className='col-span-10 border border-blue-500'>
-            {data.title === 'hero' ? <Hero hiddenClass={isOpen} /> : null}
-            {data.title === 'about' ? <About hiddenClass={isOpen} /> : null}
           </div>
         </>
       ))}
