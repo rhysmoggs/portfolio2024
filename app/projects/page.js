@@ -1,9 +1,7 @@
 'use client'
 import { useState, useRef } from 'react'
-import Navbar from '../components/Navbar'
 import ProjectCard from '../components/ProjectCard'
 import ProjectTag from '../components/ProjectTag'
-import Footer from '../components/Footer'
 import { motion, useInView } from 'framer-motion'
 
 const projectsData = [

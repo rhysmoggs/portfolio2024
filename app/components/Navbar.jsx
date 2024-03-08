@@ -26,8 +26,7 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    // <nav className='h-full w-1/5 bg-red-300 opacity-50 fixed'>
-    <nav className='sticky top-0 left-0 right-0 z-10 pb-8 md:pb-1 md:h-full md:w-1/5 bg-red-300 opacity-50 md:fixed'>
+    <nav className='sticky top-0 left-0 right-0 z-10 pb-8 md:pb-1 md:h-full md:w-1/5 bg-red-300 md:fixed'>
       <div className='absolute left-0 top-0 h-16 w-16'>
         {/* empty div for space */}
       </div>
@@ -67,7 +66,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className='hidden md:block col-span-2 mx-2 place-self-center border border-red-500 text-right pr-2 mt-24'>
+      <div className='hidden md:block col-span-2 mx-2 place-self-center text-right pr-2 mt-24'>
         {navLinks.map((link, index) => (
           <div key={index}>
             <NavLink href={link.path} title={link.title} pageNo={link.pageNo} />
