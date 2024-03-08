@@ -35,3 +35,9 @@ body {
 .calcWidth {
   margin-left: calc(25vw);
 }
+
+@media screen and (max-width: 768px) {
+  .calcWidth {
+    margin: 0px 40px;
+  }
+}

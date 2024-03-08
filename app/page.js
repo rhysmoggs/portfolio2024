@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <main className='flex h-screen flex-col bg-[#121212] border border-pink-500'>
       <section className='pt-20 calcWidth'>
-        <div className='grid grid-cols-1 sm:grid-cols-12'>
-          <div className='col-span-8 place-self-center text-center sm:text-left md:justify-self-start'>
+        <div className='grid md:grid-cols-2 gap-8'>
+          {/* <div className='grid grid-cols-1 sm:grid-cols-12'> */}
+          <div className='place-self-center text-center md:text-left  md:justify-self-start'>
             <h1 className='text-white mb-4 text-xl md:text-3xl lg:text-5xl lg:leading-normal font-extrabold'>
               <span className='text-primary-500'>Hello, </span>
               <span className='text-secondary-100'>I&apos;m </span>
@@ -56,7 +57,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className='col-span-4 place-self-center mt-4 lg:mt-0'>
+          <div className='place-self-center mt-4 lg:mt-0'>
             <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
               <Image
                 src='/images/headshot.jpg'

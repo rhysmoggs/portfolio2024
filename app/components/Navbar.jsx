@@ -67,18 +67,11 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className='md:mx-8 md:mt-32'>
-        {navLinks.map((data, index) => (
-          <>
-            <div className='hidden md:block col-span-2 mx-2 place-self-center border border-red-500 text-right'>
-              <NavLink
-                key={index}
-                href={data.path}
-                title={data.title}
-                pageNo={data.pageNo}
-              />
-            </div>
-          </>
+      <div className='hidden md:block col-span-2 mx-2 place-self-center border border-red-500 text-right pr-2 mt-24'>
+        {navLinks.map((link, index) => (
+          <div key={index}>
+            <NavLink href={link.path} title={link.title} pageNo={link.pageNo} />
+          </div>
         ))}
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
