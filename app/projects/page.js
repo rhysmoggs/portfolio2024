@@ -99,7 +99,7 @@ export default function Projects() {
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
       <section className='text-white calcWidth' id='projects'>
-        <div className='pt-8 px-4 xl:px-16'>
+        <div className='pt-8 md:px-4 xl:px-16'>
           <div className='mt-4 text-left flex flex-col h-full'>
             <h2 className='text-center text-4xl font-bold text-white mt-16 mb-4 md:mb-8'>
               Projects

@@ -26,7 +26,7 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <nav className='sticky top-0 left-0 right-0 z-10 pb-8 md:pb-1 md:h-full md:w-1/5 bg-red-300 md:fixed'>
+    <nav className='sticky top-0 left-0 right-0 z-10 pb-5 md:pb-1 md:h-full md:w-1/5 bg-red-300 md:fixed'>
       <div className='absolute left-0 top-0 h-16 w-16'>
         {/* empty div for space */}
       </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
           <span className='block text-xs md:text-sm leading-3 text-secondary-100'>
             rhysmoggs - dev.
           </span>
-          <span className='block text-xs  text-secondary-100'>___________</span>
+          {/* <span className='block text-xs  text-secondary-100'>___________</span> */}
         </Link>
       </div>
       <div className='absolute top-6 right-0 h-16 w-16'>
