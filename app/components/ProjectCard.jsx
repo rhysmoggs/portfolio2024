@@ -1,6 +1,7 @@
 import React from 'react'
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 function ProjectCard({ image, title, description, techstack, github }) {
   return (
@@ -26,10 +27,15 @@ function ProjectCard({ image, title, description, techstack, github }) {
           </Link>
         </div>
       </div>
-      <div className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4'>
+      <motion.div
+        whileHover={{ y: 10 }}
+        transition={{ easeInOut: 0.5 }}
+        className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4 line-clamp-4 hover:line-clamp-none'
+      >
         <h5 className='font-xl font-semibold mb-2'>{title}</h5>
         <p className='text-[#ADB7BE]'>{description}</p>
-        <ul className='text-[#ADB7BE]'>Techstack:</ul>
+        <br />
+        <ul className='text-[#ADB7BE] underline'>Techstack:</ul>
         {techstack.map((tech, id) => {
           return (
             <li className='text-[#ADB7BE]' key={id}>
@@ -37,10 +43,11 @@ function ProjectCard({ image, title, description, techstack, github }) {
             </li>
           )
         })}
+        <br />
         <a href={github} className='text-[#ADB7BE]'>
           {github}
         </a>
-      </div>
+      </motion.div>
     </div>
   )
 }

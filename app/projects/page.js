@@ -133,7 +133,7 @@ export default function Projects() {
             </div>
           </div>
           <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-            {Object.keys(filteredProjects).length !== 0 ? (
+            {Object.keys(filteredProjects).length !== 0 &&
               filteredProjects.map((project, index) => (
                 <motion.li
                   key={index}
@@ -151,15 +151,15 @@ export default function Projects() {
                     github={project.github}
                   />
                 </motion.li>
-              ))
-            ) : (
-              <>
-                <h5 className='text-center text-2xl text-white mt-4 mb-8 md:mb-12'>
-                  No current projects in {tag} category.
-                </h5>
-              </>
-            )}
+              ))}
           </ul>
+          {filteredProjects.length === 0 && (
+            <ul ref={ref}>
+              <h5 className='text-center text-2xl text-white mt-4 mb-8 md:mb-12'>
+                No current projects in {tag} category.
+              </h5>
+            </ul>
+          )}
         </div>
       </section>
     </main>
