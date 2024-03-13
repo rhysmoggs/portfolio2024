@@ -57,16 +57,15 @@ export default function About() {
 
   return (
     <main className='flex min-h-screen flex-col bg-[#121212]'>
-      <section className='text-white calcWidth' id='about'>
-        {/* <div className='pt-8 md:pt-24 lg:pt-32 px-4 xl:px-16'> */}
+      <section className='text-white calcWidth'>
         <div className='pt-8 px-4 xl:px-16'>
-          <div className='mt-4 text-left flex flex-col h-full'>
-            <h2 className='text-center text-4xl font-bold text-white mt-16 mb-4 md:mb-0'>
+          <div className='md:mt-4 text-left flex flex-col h-full'>
+            <h2 className='text-center text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
               About Me
             </h2>
           </div>
         </div>
-        <div className='md:grid md:grid-cols-2 gap-8 px-4 xl:gap-16 xl:px-16 min-h-screen'>
+        <div className='md:grid md:grid-cols-2 gap-8 md:px-4 xl:gap-16 xl:px-16 min-h-screen'>
           <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden mx-auto md:mt-28'>
             <Image
               src='/images/headshot.jpg'
@@ -78,7 +77,7 @@ export default function About() {
               priority={true}
             />
           </div>
-          <div className='py-8 px-4 sm:py-16 xl:px-16 min-h-screen'>
+          <div className='py-8 md:px-4 sm:py-16 xl:px-16 min-h-screen'>
             <p className='text-base lg:text-lg'>
               {/* add attributes to HYVE link below: */}I am a Front End
               Developer with commercial experience in a junior role for{' '}

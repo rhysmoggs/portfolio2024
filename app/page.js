@@ -6,10 +6,10 @@ import { TypeAnimation } from 'react-type-animation'
 export default function Home() {
   return (
     <main className='flex h-screen flex-col bg-[#121212]'>
-      <section className='pt-20 calcWidth'>
+      <section className='pt-10 md:pt-20 calcWidth'>
         <div className='grid md:grid-cols-2 gap-8'>
           <div className='place-self-center text-center md:text-left  md:justify-self-start'>
-            <h1 className='text-white mb-4 text-xl md:text-3xl lg:text-5xl lg:leading-normal font-extrabold'>
+            <h1 className='text-white mb-4 text-3xl lg:text-5xl lg:leading-normal font-extrabold'>
               <span className='text-primary-500'>Hello, </span>
               <span className='text-secondary-100'>I&apos;m </span>
               <br />

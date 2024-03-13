@@ -7,14 +7,14 @@ const NavLink = ({ href, title, pageNo }) => {
     <>
       <Link
         href={href}
-        className='block py-2 text-black sm:text-xl rounded hover:text-white'
+        className='block md:py-2 text-black rounded hover:text-white'
       >
-        <h1 className='text-white text-xl'>{0 + `${pageNo}`}</h1>
+        <h1 className='text-white text-sm md:text-xl'>{0 + `${pageNo}`}</h1>
         <motion.h1
           whileHover={{ scale: 1.15 }}
           initial={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='text-white md:font-medium xl:font-semibold text-2xl md:text-4xl lg:text-5xl'
+          className='text-white text-lg md:font-medium xl:font-semibold md:text-4xl lg:text-5xl'
         >
           {title}
         </motion.h1>
