@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <Navbar />
-        <main className='flex h-screen flex-col bg-[#121212]/95'>
+        <main className='flex min-h-screen flex-col bg-[#121212]/95'>
           <div className='-z-50'>
             <Image
               src='/images/bg.jpg'

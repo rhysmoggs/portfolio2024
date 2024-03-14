@@ -131,7 +131,7 @@ export default function Projects() {
             />
           </div>
         </div>
-        <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
+        <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12 mb-10'>
           {Object.keys(filteredProjects).length !== 0 &&
             filteredProjects.map((project, index) => (
               <motion.li
