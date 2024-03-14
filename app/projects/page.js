@@ -97,71 +97,69 @@ export default function Projects() {
   }
 
   return (
-    <main className='flex min-h-screen flex-col bg-[#121212]'>
-      <section className='text-white calcWidth'>
-        <div className='pt-8 md:px-4 xl:px-16'>
-          <div className='md:mt-4 text-left flex flex-col h-full'>
-            <h2 className='text-center text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
-              Projects
-            </h2>
-            <div className='text-white flex flex-row flex-wrap justify-center items-center gap-3 py-6 mb-8'>
-              <ProjectTag
-                onClick={handleTagChange}
-                name={'All'}
-                isSelected={tag === 'All'}
-              />
-              <ProjectTag
-                onClick={handleTagChange}
-                name={'Web'}
-                isSelected={tag === 'Web'}
-              />
-              <ProjectTag
-                onClick={handleTagChange}
-                name={'Mobile'}
-                isSelected={tag === 'Mobile'}
-              />
-              <ProjectTag
-                onClick={handleTagChange}
-                name={'Database'}
-                isSelected={tag === 'Database'}
-              />
-              <ProjectTag
-                onClick={handleTagChange}
-                name={'E-commerce'}
-                isSelected={tag === 'E-commerce'}
-              />
-            </div>
+    <section className='text-white calcWidth'>
+      <div className='pt-8 md:px-4 xl:px-16'>
+        <div className='md:mt-4 text-left flex flex-col h-full'>
+          <h2 className='text-center text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
+            Projects
+          </h2>
+          <div className='text-white flex flex-row flex-wrap justify-center items-center gap-3 py-6 mb-8'>
+            <ProjectTag
+              onClick={handleTagChange}
+              name={'All'}
+              isSelected={tag === 'All'}
+            />
+            <ProjectTag
+              onClick={handleTagChange}
+              name={'Web'}
+              isSelected={tag === 'Web'}
+            />
+            <ProjectTag
+              onClick={handleTagChange}
+              name={'Mobile'}
+              isSelected={tag === 'Mobile'}
+            />
+            <ProjectTag
+              onClick={handleTagChange}
+              name={'Database'}
+              isSelected={tag === 'Database'}
+            />
+            <ProjectTag
+              onClick={handleTagChange}
+              name={'E-commerce'}
+              isSelected={tag === 'E-commerce'}
+            />
           </div>
-          <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-            {Object.keys(filteredProjects).length !== 0 &&
-              filteredProjects.map((project, index) => (
-                <motion.li
-                  key={index}
-                  variants={cardVariants}
-                  initial='initial'
-                  animate={isInView ? 'animate' : 'initial'}
-                  transition={{ duration: 0.3, delay: index * 0.4 }}
-                >
-                  <ProjectCard
-                    key={project.id}
-                    title={project.title}
-                    description={project.description}
-                    techstack={project.techstack}
-                    image={project.image}
-                    github={project.github}
-                  />
-                </motion.li>
-              ))}
-          </ul>
-          {filteredProjects.length === 0 && (
-            <ul ref={ref}>
-              <h5 className='text-center text-2xl text-white mt-4 mb-8 md:mb-12'>
-                No current projects in {tag} category.
-              </h5>
-            </ul>
-          )}
         </div>
-      </section>
-    </main>
+        <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
+          {Object.keys(filteredProjects).length !== 0 &&
+            filteredProjects.map((project, index) => (
+              <motion.li
+                key={index}
+                variants={cardVariants}
+                initial='initial'
+                animate={isInView ? 'animate' : 'initial'}
+                transition={{ duration: 0.3, delay: index * 0.4 }}
+              >
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  techstack={project.techstack}
+                  image={project.image}
+                  github={project.github}
+                />
+              </motion.li>
+            ))}
+        </ul>
+        {filteredProjects.length === 0 && (
+          <ul ref={ref}>
+            <h5 className='text-center text-2xl text-white mt-4 mb-8 md:mb-12'>
+              No current projects in {tag} category.
+            </h5>
+          </ul>
+        )}
+      </div>
+    </section>
   )
 }
