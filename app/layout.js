@@ -17,13 +17,12 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         <main className='flex min-h-screen flex-col bg-[#121212]/95'>
-          <div className='-z-50'>
+          <div className='-z-50 h-full'>
             <Image
               src='/images/bg.jpg'
               alt='city skyline at night'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
+              fill={true}
+              className='object-cover object-center'
               priority={true}
             />
           </div>
