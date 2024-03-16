@@ -13,13 +13,15 @@ export default function Contact() {
           <ul className='mx-auto'>
             <SocialIcon
               url='https://github.com/rhysmoggs'
-              label='personal github link'
+              label='personal github link (opens in new tab)'
               style={{ height: 80, width: 80, margin: 10 }}
+              target='_blank'
             />
             <SocialIcon
               url='https://www.linkedin.com/in/rhysmoggs/'
-              label='personal linkedIn link'
+              label='personal linkedIn link (opens in new tab)'
               style={{ height: 80, width: 80, margin: 10 }}
+              target='_blank'
             />
           </ul>
         </div>
