@@ -100,7 +100,7 @@ export default function Projects() {
     <section className='text-white calcWidth'>
       <div className='pt-8 md:px-4 xl:px-16'>
         <div className='md:mt-4 text-left flex flex-col h-full'>
-          <h2 className='text-center text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
+          <h2 className='text-center text-2xl md:text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
             Projects
           </h2>
           <div className='text-white flex flex-row flex-wrap justify-center items-center gap-3 py-6 mb-8'>
