@@ -7,7 +7,7 @@ const NavLink = ({ href, title, pageNo }) => {
     <>
       <Link
         href={href}
-        className='block py-2 text-black rounded hover:text-white uppercase'
+        className='block py-2 text-black rounded hover:text-white uppercase md:normal-case'
       >
         <h1 className='hidden md:block text-white text-sm md:text-lg'>
           {0 + `${pageNo}`}

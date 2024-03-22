@@ -16,18 +16,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <Navbar />
-        <main className='flex min-h-screen flex-col bg-[#121212]/95'>
-          <div className='-z-50 h-full'>
-            <Image
-              src='/images/bg.jpg'
-              alt='city skyline at night'
-              fill={true}
-              className='object-cover object-center'
-              priority={true}
-            />
-          </div>
-          {children}
-        </main>
+        <main className='flex min-h-screen flex-col'>{children}</main>
         <Footer />
       </body>
     </html>
