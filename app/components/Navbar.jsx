@@ -26,7 +26,7 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <nav className='sticky top-0 left-0 right-0 z-10 pb-5 md:pb-1 md:h-full md:w-1/5 bg-black md:bg-slate-300/5 md:fixed'>
+    <nav className='sticky top-0 left-0 right-0 z-10 pb-5 md:pb-1 md:h-full md:w-1/5 bg-black bg-opacity-90 md:bg-slate-300/5 md:fixed'>
       <div className='absolute left-0 top-0 h-16 w-16'>
         {/* empty div for space */}
       </div>
