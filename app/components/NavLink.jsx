@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const NavLink = ({ href, title, pageNo }) => {
+  const pathname = usePathname()
   return (
     <>
       <Link
@@ -16,7 +18,9 @@ const NavLink = ({ href, title, pageNo }) => {
           whileHover={{ scale: 1.15 }}
           initial={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='text-white text-sm md:font-medium xl:font-semibold md:text-4xl lg:text-5xl'
+          className={`text-white text-sm md:font-medium xl:font-semibold md:text-4xl lg:text-5xl ${
+            pathname === href ? 'text-red-500' : ''
+          }`}
         >
           {title}
         </motion.h1>

@@ -35,6 +35,10 @@ body {
   margin-left: calc(25vw);
 }
 
+.centerFooter {
+  margin-left: calc(25vw);
+}
+
 @media screen and (max-width: 768px) {
   .calcWidth {
     margin: 0px 40px;
