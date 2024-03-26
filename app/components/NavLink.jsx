@@ -18,8 +18,8 @@ const NavLink = ({ href, title, pageNo }) => {
           whileHover={{ scale: 1.15 }}
           initial={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className={`text-white text-sm md:font-medium xl:font-semibold md:text-4xl lg:text-5xl ${
-            pathname === href ? 'text-red-500' : ''
+          className={`text-sm md:font-medium xl:font-semibold md:text-4xl lg:text-5xl ${
+            pathname === href ? 'text-red-500' : 'text-white'
           }`}
         >
           {title}
