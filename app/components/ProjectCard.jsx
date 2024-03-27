@@ -35,14 +35,16 @@ function ProjectCard({ image, title, description, techstack, github }) {
         <h5 className='font-xl font-semibold mb-2'>{title}</h5>
         <p className='text-[#ADB7BE]'>{description}</p>
         <br />
-        <ul className='text-[#ADB7BE] underline'>Techstack:</ul>
-        {techstack.map((tech, id) => {
-          return (
-            <li className='text-[#ADB7BE]' key={id}>
-              {tech}
-            </li>
-          )
-        })}
+        <ul className='text-[#ADB7BE]'>
+          Techstack:
+          {techstack.map((tech, id) => {
+            return (
+              <li className='text-[#ADB7BE]' key={id}>
+                {tech}
+              </li>
+            )
+          })}
+        </ul>
         <br />
         <a href={github} className='text-[#ADB7BE]'>
           {github}

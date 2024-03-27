@@ -54,26 +54,6 @@ export default function Home() {
               </span>
             </Link>
           </div>
-          {/* <div>
-              <Link
-                href={'https://www.linkedin.com/in/rhysmoggs/'}
-                target='_blank'
-                rel='noreferrer'
-                className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-secondary-100 bg-primary-500 hover:bg-secondary-200 text-black'
-              >
-                Hire Me @ LinkedIn
-              </Link>
-              <Link
-                href={'https://github.com/rhysmoggs'}
-                target='_blank'
-                rel='noreferrer'
-                className='px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-secondary-100 to-primary-500 hover:bg-secondary-800 text-white mt-3'
-              >
-                <span className='block bg-[#121212] hover:bg-secondary-800 rounded-full px-5 py-2'>
-                  GitHub
-                </span>
-              </Link>
-            </div> */}
         </div>
         <div className='place-self-center mt-4 lg:mt-0'>
           <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden'>
