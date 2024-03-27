@@ -9,17 +9,14 @@ const navLinks = [
   {
     title: 'about',
     path: '/about',
-    pageNo: 1,
   },
   {
     title: 'contact',
     path: '/contact',
-    pageNo: 2,
   },
   {
     title: 'projects',
     path: '/projects',
-    pageNo: 3,
   },
 ]
 
@@ -69,7 +66,7 @@ const Navbar = () => {
       <div className='hidden md:block col-span-2 mx-2 place-self-center text-right pr-2 mt-24'>
         {navLinks.map((link, index) => (
           <div key={index}>
-            <NavLink href={link.path} title={link.title} pageNo={link.pageNo} />
+            <NavLink href={link.path} title={link.title} />
           </div>
         ))}
       </div>

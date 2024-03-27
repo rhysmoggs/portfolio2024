@@ -6,7 +6,7 @@ function ProjectTag({ name, onClick, isSelected }) {
     : 'text-white-[#ADB7BE]border-secondary-600 hover:border-white'
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={`${buttonStyles} rounded-full border-2 px-3 py-2 text-base md:text-xl cursor-pointer`}
       onClick={() => onClick(name)}
     >
       {name}

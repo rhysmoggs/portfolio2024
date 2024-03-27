@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 
-const NavLink = ({ href, title, pageNo }) => {
+const NavLink = ({ href, title }) => {
   const pathname = usePathname()
   return (
     <>
@@ -11,9 +11,6 @@ const NavLink = ({ href, title, pageNo }) => {
         href={href}
         className='block py-2 text-black rounded hover:text-white uppercase md:normal-case'
       >
-        <h1 className='hidden md:block text-white text-sm md:text-lg'>
-          {0 + `${pageNo}`}
-        </h1>
         <motion.h1
           whileHover={{ scale: 1.15 }}
           initial={{ opacity: 1, scale: 1 }}

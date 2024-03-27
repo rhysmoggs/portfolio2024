@@ -30,16 +30,17 @@ function ProjectCard({ image, title, description, techstack, github }) {
       <motion.div
         whileHover={{ y: 10 }}
         transition={{ easeInOut: 0.5 }}
-        className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-2 md:px-4 line-clamp-4 hover:line-clamp-none'
+        className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-2 md:px-4 line-clamp-4 hover:line-clamp-none break-words'
+        // className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-2 md:px-4 line-clamp-4 hover:line-clamp-none'
       >
         <h5 className='font-xl font-semibold mb-2'>{title}</h5>
         <p className='text-[#ADB7BE]'>{description}</p>
         <br />
         <ul className='text-[#ADB7BE]'>
-          Techstack:
+          <h6 className='underline font-semibold'>Techstack:</h6>
           {techstack.map((tech, id) => {
             return (
-              <li className='text-[#ADB7BE]' key={id}>
+              <li className='text-[#ADB7BE] list-disc ml-4' key={id}>
                 {tech}
               </li>
             )
