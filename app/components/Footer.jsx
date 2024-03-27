@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='mb-10 flex flex-row justify-center centerFooter'>
+    <footer className='mb-10 flex flex-row justify-center calcWidth'>
       {/* <span>rhysmoggs</span> */}
       <Link
         href={'https://www.linkedin.com/in/rhysmoggs/'}
