@@ -2,10 +2,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <section className='pt-10 md:pt-20 calcWidth'>
+    <motion.section
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ opacity: 0, y: 500, scale: 0.9 }}
+      transition={{ duration: 0.6 }}
+      className='pt-10 md:pt-20 calcWidth'
+    >
       <div className='grid md:grid-cols-2 gap-8'>
         <div className='place-self-center text-center md:text-left md:justify-self-start'>
           <h1 className='text-white mb-4 text-2xl md:text-4xl lg:text-5xl lg:leading-normal font-extrabold'>
@@ -69,6 +75,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

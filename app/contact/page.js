@@ -1,8 +1,15 @@
+'use client'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
-    <section className='text-white calcWidth'>
+    <motion.section
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ opacity: 0, y: 500, scale: 0.9 }}
+      transition={{ duration: 0.6 }}
+      className='text-white calcWidth'
+    >
       <div className='pt-8 md:px-4 xl:px-16'>
         <div className='md:mt-4 flex flex-col h-full'>
           <h2 className='md:hidden text-center text-2xl md:text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
@@ -42,6 +49,6 @@ export default function Contact() {
           </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
