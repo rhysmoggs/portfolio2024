@@ -10,7 +10,7 @@ export default function Home() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       initial={{ opacity: 0, y: 500, scale: 0.9 }}
       transition={{ duration: 0.6 }}
-      className='pt-10 md:pt-20 calcWidth'
+      className='pt-10 md:pt-20 calcWidth flex-grow'
     >
       <div className='grid md:grid-cols-2 gap-8'>
         <div className='place-self-center text-center md:text-left md:justify-self-start'>

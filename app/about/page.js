@@ -61,17 +61,17 @@ export default function About() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       initial={{ opacity: 0, y: 500, scale: 0.9 }}
       transition={{ duration: 0.6 }}
-      className='text-white calcWidth'
+      className='text-white calcWidth flex-grow'
     >
-      <div className='pt-8 px-4 xl:px-16'>
-        <div className='md:mt-4 text-left flex flex-col h-full'>
+      <div className='pt-8 md:px-4 xl:px-16'>
+        <div className='md:mt-4 flex flex-col h-full'>
           <h2 className='md:hidden text-center text-2xl md:text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
             About Me
           </h2>
         </div>
       </div>
-      <div className='md:grid md:grid-cols-2 gap-8 md:px-4 xl:gap-16 xl:px-16 min-h-screen'>
-        <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden mx-auto md:mt-28'>
+      <div className='md:grid md:grid-cols-3'>
+        <div className='w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] relative overflow-hidden mx-auto md:mt-28 md:pr-4 lg:pr-14'>
           <Image
             src='/images/headshot.jpg'
             alt='headshot of developer rhysmoggs'
@@ -82,14 +82,15 @@ export default function About() {
             priority={true}
           />
         </div>
-        <div className='py-8 md:px-4 sm:py-16 xl:px-16 min-h-screen'>
-          <p className='text-base lg:text-lg'>
+        <div className='py-8 md:px-8 md:mx-8 col-span-2'>
+          <p className='text-sm xl:text-base'>
             {/* add attributes to HYVE link below: */}I am a Front End Developer
             with commercial experience in a junior role for{' '}
             <Link
               href={'https://www.trainhyve.com/'}
               target='_blank'
               rel='noreferrer'
+              className='font-bold'
             >
               HYVE
             </Link>

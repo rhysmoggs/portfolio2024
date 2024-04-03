@@ -8,7 +8,7 @@ export default function Contact() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       initial={{ opacity: 0, y: 500, scale: 0.9 }}
       transition={{ duration: 0.6 }}
-      className='text-white calcWidth'
+      className='text-white calcWidth flex-grow'
     >
       <div className='pt-8 md:px-4 xl:px-16'>
         <div className='md:mt-4 flex flex-col h-full'>
