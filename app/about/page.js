@@ -1,9 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { useState, useTransition } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import TabButton from '../components/TabButton'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 const TAB_DATA = [
   {
@@ -56,6 +57,11 @@ export default function About() {
     })
   }
 
+  const pathname = usePathname()
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [pathname])
+
   return (
     <motion.section
       animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -84,8 +90,8 @@ export default function About() {
         </div>
         <div className='py-8 md:px-8 md:mx-8 col-span-2'>
           <p className='text-sm xl:text-base'>
-            {/* add attributes to HYVE link below: */}I am a Front End Developer
-            with commercial experience in a junior role for{' '}
+            I am a Front End Developer with commercial experience in a junior
+            role for{' '}
             <Link
               href={'https://www.trainhyve.com/'}
               target='_blank'
@@ -97,22 +103,15 @@ export default function About() {
             , a revolutionary gym and wellbeing centre.
             <br />
             <br />
-            {/* add date of graduation? and link to CI website?: */}
             Having graduated with a Diploma in Web Application Development from
-            Code Institute, I am happily a career changer. Previously, I held
-            supervisory and team leader roles for hugely successful companies in
-            the UK and Australia and have over 10 years of experience working
-            within the telecommunications, energy and financial sectors.
+            Code Institute in December 2022, I am happily a career changer.
+            Previously, I held supervisory and team leader roles for hugely
+            successful companies in the UK and Australia and have over 10 years
+            of experience working within the telecommunications, energy and
+            financial sectors.
             <br />
-            <br />
-            {/* add link to Projects/GitHub page below - add span?: */}I have
-            built multiple{' '}
-            <Link
-              href={'https://github.com/rhysmoggs'}
-              target='_blank'
-              rel='noreferrer'
-              className='font-bold'
-            >
+            <br />I have built multiple{' '}
+            <Link href={'/projects'} className='font-bold'>
               projects
             </Link>{' '}
             and have collaborated on both personal and professional projects
@@ -124,7 +123,6 @@ export default function About() {
             Practitioner & Solutions Architect and have previously studied Game
             Design at University.
             <br />
-            {/* add link to Projects/GitHub page below: */}
             Please take some time to look around.
           </p>
           <div className='flex flex-row justify-start my-8'>
