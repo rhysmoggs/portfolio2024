@@ -71,9 +71,9 @@ export default function About() {
     >
       <div className='pt-8 md:px-4 xl:px-16'>
         <div className='md:mt-4 flex flex-col h-full'>
-          <h2 className='md:hidden text-center text-2xl md:text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
+          {/* <h2 className='md:hidden text-center text-2xl md:text-4xl font-bold text-white md:mt-10 mb-4 md:mb-0'>
             About Me
-          </h2>
+          </h2> */}
         </div>
       </div>
       <div className='md:grid md:grid-cols-3'>
